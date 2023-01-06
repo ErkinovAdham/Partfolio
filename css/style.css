@@ -1,0 +1,411 @@
+/* ========================= NORMALIZE CSS ========================= */
+
+:root {
+  --mainBlue: #2965ff;
+  --dark: #000;
+  --gray: grey;
+  --secondaryGray: #161616;
+  --mainWhite: #fff;
+  --lightBlue: #7295f0;
+  --lightBlueTransparent: rgba(114, 148, 238, 0.7);
+  --lightBlueHover: rgba(114, 148, 238, 0.95);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  line-height: 20px;
+}
+a {
+  text-decoration: none;
+  color: var(--gray);
+}
+
+ul {
+  list-style: none;
+}
+.container {
+  padding: 0 20px;
+  width: 100%;
+  margin: auto;
+}
+.row {
+  display: flex;
+}
+
+/* ========================= NORMALIZE CSS ========================= */
+
+/* ========================= BEGINNING OF NAVIGATION ========================= */
+
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  background: rgb(131,58,180);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+.nav__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 2vh;
+}
+.nav-brand {
+  display: flex;
+  align-items: center;
+  height: 8rem;
+  padding-bottom: 0.5rem;
+  font-family: "Space Grotesk Web", sans-serif;
+  color: var(--mainBlue);
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+.nav-brand .text-block {
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+.nav__menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav__link {
+  margin-right: 1rem;
+  margin-left: 1rem;
+  padding: 0 0 0.5rem;
+  box-shadow: none;
+  transition: color 0.2s, box-shadow 0.2s;
+  font-family: "Neue Haas Grotesk Web", sans-serif;
+  color: rgb(228, 213, 213);
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.nav__link:first-of-type {
+  margin-left: 0;
+}
+.nav__link:last-of-type {
+  margin-right: 0;
+}
+.nav__link.active {
+  box-shadow: inset 0 -3px 0 0 rgb(0 0 0 / 50%);
+  color: var(--dark);
+  font-weight: 700;
+}
+.nav__link:hover {
+  box-shadow: inset 0 -3px 0 0 rgb(0 0 0 / 50%);
+  color: var(--dark);
+}
+
+/* ========================= END OF NAVIGATION ========================= */
+
+/* ========================= BEGINNING OF HERO ========================= */
+
+.hero {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-image: url(../assets/img/heroBg.png);
+  background-position: 0 0;
+  background-size: cover;
+}
+.hero .row {
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.hero__content {
+  position: relative;
+  width: 100%;
+}
+.hero__title {
+  margin-bottom: 20px;
+  margin-left: 0;
+  padding-top: 0;
+  font-size: 6vh;
+  line-height: 8vh;
+  text-indent: 0;
+  font-family: "Space Grotesk Web", sans-serif;
+}
+
+.hero__paragraph {
+  margin-top: 4rem;
+  font-family: "Neue Haas Grotesk Web", sans-serif;
+  font-weight: 400;
+  color: #161616;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+}
+
+.hero .arrow__down {
+  position: absolute;
+  left: 50%;
+  bottom: -100px;
+  transform: translate(-50%);
+  cursor: pointer;
+}
+
+/* ========================= END OF HERO ========================= */
+
+/* ========================= BEGINNING OF SECTION ========================= */
+
+section.project {
+  position: relative;
+  top: 100vh;
+}
+.project .row {
+  flex-direction: column;
+}
+.project > .row .col {
+  display: flex;
+  align-items: center;
+  height: 120vh;
+}
+.about {
+  background-image: url(../assets/img/avatar.jpg);
+  background-position: 20vw 40%;
+  background-size: cover;
+  background-attachment: scroll !important;
+  background-repeat: no-repeat;
+}
+.about .project__content {
+  background-color: #fff;
+}
+.about__ali {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+.about .project__title,
+.about .project__paragraph,
+.about .project__skills--item {
+  font-size: 16px;
+  font-family: "Sofia Pro";
+  letter-spacing: 0.14px;
+  line-height: 25px;
+}
+.about .project__title {
+  font-weight: 600;
+  text-transform: none;
+  color: #333;
+  padding: 0;
+}
+.about .about__title {
+  font-size: 18px;
+}
+.about .project__paragraph {
+  font-weight: 400;
+  padding: 0 9vw 0;
+  color: #000;
+  margin: 20px 0 0 0;
+}
+.skills__wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  padding: 0 9vw;
+}
+.about .project__skills--menu {
+  margin-top: 20px;
+  text-align: start;
+  align-self: flex-start;
+}
+.about .project__skills--menu:first-of-type {
+  padding-right: 9vw;
+}
+.about .project__skills--item {
+  margin: 0;
+  padding: 0;
+}
+
+.mycenter {
+  background-image: url(../assets/img/google.png);
+  background-color: #fff;
+  background-position: 100% 100%;
+  background-size: cover;
+}
+.mycenter .project__content {
+  background-image: linear-gradient(
+    rgba(66, 132, 244, 0.7),
+    rgba(66, 132, 244, 0.7)
+  );
+}
+.mycenter .project__content:hover {
+  background-image: linear-gradient(
+    rgba(66, 132, 244, 0.85),
+    rgba(66, 132, 244, 0.85)
+  );
+}
+.turbosale {
+  background-image: url(../assets/img/turnosale.png);
+  background-position: 100% 100%;
+  background-size: cover;
+}
+.turbosale .project__content {
+  background-image: linear-gradient(rgba(255, 0, 4, 0.5), rgba(255, 0, 4, 0.5));
+}
+.turbosale .project__content:hover {
+  background-image: linear-gradient(
+    rgba(187, 8, 10, 0.93),
+    rgba(187, 8, 10, 0.93)
+  );
+}
+.project__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 100%;
+}
+.project__number {
+  margin-bottom: 1.6rem;
+  padding-top: 1.7rem;
+  padding-bottom: 1.5rem;
+  font-family: "Space Grotesk Web", sans-serif;
+  color: var(--mainWhite);
+  font-size: 6.5rem;
+  font-weight: 200;
+}
+.project__title {
+  padding-top: 1.3rem;
+  padding-bottom: 1.6rem;
+  font-family: "Space Grotesk Web", sans-serif;
+  color: var(--mainWhite);
+  font-size: 4.5rem;
+  font-weight: 900;
+}
+.project__paragraph {
+  margin-top: 4.1rem;
+  margin-bottom: 2rem;
+  font-family: "Neue Haas Grotesk Web", sans-serif;
+  color: var(--mainWhite);
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.project__link {
+  padding-bottom: 0.5rem;
+  box-shadow: inset 0 -2px 0 0 hsl(0deg 0% 100% / 20%);
+  font-family: "Neue Haas Grotesk Web", sans-serif;
+  color: var(--mainWhite);
+}
+.project__link:hover {
+  box-shadow: inset 0 -2px 0 0 var(--mainWhite);
+  color: var(--mainWhite);
+}
+/* ========================= END OF SECTION ========================= */
+
+.footer {
+  background: rgb(63,94,251);
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+.footer .col {
+  padding: 9rem 0;
+  height: auto;
+}
+.footer__title {
+  margin-bottom: 4rem;
+  font-family: "Space Grotesk Web", sans-serif;
+  font-size: 3.6rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 460px;
+  }
+  .nav__wrapper {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding-top: 8vh;
+  }
+  .nav-brand {
+    height: auto;
+  }
+  .nav__menu {
+    width: auto;
+  }
+  .hero__content {
+    top: 20vh;
+  }
+  .hero__title {
+    margin-bottom: 0;
+  }
+  .hero__paragraph {
+    margin-top: 0;
+  }
+  .hero .arrow__down {
+    bottom: -70px;
+  }
+}
+@media screen and (min-width: 575px) {
+  .container {
+    max-width: 555px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 740px;
+  }
+  .nav-brand {
+    font-size: 3.2rem;
+  }
+  .hero__title {
+    font-size: 9vh;
+    line-height: 15vh;
+  }
+  .project .col {
+    background-attachment: fixed;
+  }
+  .project__content {
+    flex: 0 0 50%;
+  }
+}
+@media screen and (min-width: 991px) {
+  html {
+    font-size: 11px;
+  }
+  .container {
+    max-width: 970px;
+  }
+  .hero__title {
+    font-size: 12vh;
+    font-weight: 700;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1400px;
+  }
+  .nav__link {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 1660px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+
+/* background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%); */
